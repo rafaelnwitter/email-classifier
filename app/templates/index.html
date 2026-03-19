@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classificador Inteligente de Emails</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <p class="eyebrow">AutoU Challenge</p>
+        <h1>Classificador Inteligente de Emails</h1>
+        <p class="subtitle">
+          Faça upload de um arquivo .txt ou .pdf, ou cole o conteúdo do email para
+          classificar a mensagem como <strong>Produtiva</strong> ou <strong>Improdutiva</strong>.
+        </p>
+      </section>
+
+      <section class="card">
+        <form id="email-form">
+          <label for="email_text">Conteúdo do email</label>
+          <textarea
+            id="email_text"
+            name="email_text"
+            placeholder="Cole aqui o texto do email..."
+            rows="10"
+          ></textarea>
+
+          <div class="actions-row">
+            <div>
+              <label for="email_file">Arquivo (.txt ou .pdf)</label>
+              <input id="email_file" name="email_file" type="file" accept=".txt,.pdf" />
+            </div>
+          </div>
+
+          <div class="button-row">
+            <button type="button" id="sample-productive">Exemplo produtivo</button>
+            <button type="button" id="sample-unproductive">Exemplo improdutivo</button>
+            <button type="submit" class="primary">Analisar email</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="result" class="card hidden">
+        <div class="result-header">
+          <h2>Resultado</h2>
+          <span id="badge" class="badge"></span>
+        </div>
+
+        <div class="result-grid">
+          <div>
+            <h3>Motivo</h3>
+            <p id="reason"></p>
+          </div>
+
+          <div>
+            <h3>Confiança</h3>
+            <p id="confidence"></p>
+          </div>
+        </div>
+
+        <div>
+          <h3>Resposta sugerida</h3>
+          <div class="reply-box" id="reply"></div>
+          <button type="button" id="copy-reply">Copiar resposta</button>
+        </div>
+      </section>
+
+      <section id="error-box" class="error hidden"></section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

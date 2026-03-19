@@ -1,0 +1,76 @@
+:root {
+  --bg: #0b1020;
+  --card: #151c31;
+  --line: #2a3558;
+  --text: #f3f6ff;
+  --muted: #b8c2e0;
+  --accent: #ff8a3d;
+  --success: #18c37e;
+  --danger: #ff5a6b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #0b1020 0%, #11182c 100%);
+  color: var(--text);
+}
+
+.container {
+  width: min(960px, calc(100% - 32px));
+  margin: 40px auto;
+}
+
+.hero {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.subtitle {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.card {
+  background: rgba(21, 28, 49, 0.95);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+textarea,
+input[type="file"] {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+textarea {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  padding: 14px;
+  background: #0f1527;
+  color: var(--text);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+}
